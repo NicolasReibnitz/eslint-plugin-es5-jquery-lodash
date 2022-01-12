@@ -1,0 +1,42 @@
+{
+	"name": "eslint-plugin-es5-jquery-lodash",
+	"version": "0.0.0",
+	"description": "ESLint extension plugin for ES5 plugin users who want better differentiation between jQuery and Lodash functions and ES6 methods.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NicolasReibnitz/eslint-plugin-es5-jquery-lodash.git"
+	},
+	"author": "Nicolas Reibnitz <n.reibnitz@gmail.com> (https://daslaboritory.com)",
+	"homepage": "https://github.com/NicolasReibnitz/eslint-plugin-es5-jquery-lodash#readme",
+	"bugs": {
+		"url": "https://github.com/NicolasReibnitz/eslint-plugin-es5-jquery-lodash/issues"
+	},
+	"main": "src/index.js",
+	"scripts": {
+		"bump:major": "npm version major -f -m \"[v%s] $npm_config_message\"",
+		"bump:minor": "npm version minor -f -m \"[v%s] $npm_config_message\"",
+		"bump:patch": "npm version patch -f -m \"[v%s] $npm_config_message\"",
+		"postversion": "git push && git push --tags && npm publish",
+		"pretest": "eslint src/ tests/",
+		"preversion": "npm test && git add .",
+		"test": "mocha ./tests/index.js",
+		"version": "git add ."
+	},
+	"files": [
+		"src"
+	],
+	"keywords": [
+		"eslint",
+		"eslintplugin",
+		"es5",
+		"es2015"
+	],
+	"peerDependencies": {
+		"eslint": ">= 3.0.0"
+	},
+	"devDependencies": {
+		"eslint": "^4.14.0",
+		"mocha": "^6.1.4"
+	}
+}

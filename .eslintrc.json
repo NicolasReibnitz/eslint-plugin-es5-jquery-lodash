@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  }
+}
